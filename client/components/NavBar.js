@@ -1,7 +1,18 @@
-import React from "react";
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+import './NavBar.css';
 
 const NavBar = () => {
-  return <div>Hello from Nav Bar</div>;
+	return (
+		<nav className="navbar-container flex jcfe">
+			<div className="navbar-list flex jcsb">
+				<Link to="/projects">Projects</Link>
+				<Link to="/about">About</Link>
+				<Link to="/contact">Contact</Link>
+			</div>
+		</nav>
+	);
 };
 
 export default NavBar;
