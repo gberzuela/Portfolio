@@ -1,99 +1,115 @@
 .homepage-container {
-	background: url('../../public/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg');
-	background-size: 100vw 90vh;
-	top: 10vh;
-	left: 0;
-	height: 90vh;
-	width: 100vw;
-	position: absolute;
+  background: url("../../public/nubelson-fernandes--Xqckh_XVU4-unsplash.jpg");
+  background-size: 100vw 90vh;
+  top: 10vh;
+  left: 0;
+  height: 90vh;
+  width: 100vw;
+  position: absolute;
 }
 
 .homepage-text-container {
-	margin: 42vh 0 0 10vh;
+  margin: 42vh 0 0 10vh;
 }
 
-.homepage-text-container > p {
-	font-family: 'Roboto Mono', monospace;
-	color: white;
-	white-space: nowrap;
-	overflow: hidden;
+.homepage-text-container > * {
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold;
 }
 
 .homepage-intro {
-	font-size: 36px;
+  font-size: 36px;
 }
 
 .homepage-text {
-	font-size: 24px;
+  font-size: 24px;
 }
 
 /* Ref: https://css-tricks.com/snippets/css/typewriter-effect/ */
 .homepage-text-container p:nth-child(1) {
-	width: 32%;
-	-webkit-animation: type 2s steps(40, end);
-	animation: typewriter 2s steps(40, end);
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+  width: 32%;
+  -webkit-animation: type 2s steps(40, end);
+  animation: typewriter 2s steps(40, end);
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .homepage-text-container p:nth-child(2) {
-	width: 12%;
-	opacity: 0;
-	-webkit-animation: type2 2s steps(40, end);
-	animation: typewriter 1s steps(40, end);
-	-webkit-animation-delay: 2s;
-	animation-delay: 2s;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+  width: 12%;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: typewriter 1s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .homepage-text-container p:nth-child(3) {
-	width: 13%;
-	opacity: 0;
-	-webkit-animation: type2 2s steps(40, end);
-	animation: typewriter 1s steps(40, end);
-	-webkit-animation-delay: 2s;
-	animation-delay: 3s;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+  width: 13%;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: typewriter 1s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .homepage-text-container p:nth-child(4) {
-	width: 25%;
-	opacity: 0;
-	-webkit-animation: type2 2s steps(40, end);
-	animation: typewriter 2s steps(40, end);
-	-webkit-animation-delay: 2s;
-	animation-delay: 4s;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+  width: 25%;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: typewriter 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 .homepage-text-container p:nth-child(5) {
-	width: 25%;
-	opacity: 0;
-	-webkit-animation: type2 2s steps(40, end);
-	animation: typewriter 2s steps(40, end);
-	-webkit-animation-delay: 2s;
-	animation-delay: 6s;
-	-webkit-animation-fill-mode: forwards;
-	animation-fill-mode: forwards;
+  width: 25%;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end);
+  animation: typewriter 2s steps(40, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 6s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 @keyframes typewriter {
-	0% {
-		width: 0;
-	}
-	1% {
-		opacity: 1;
-	}
-	99.9% {
-		border-right: 0.15em solid white;
-	}
-	100% {
-		opacity: 1;
-		border: none;
-	}
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: 0.15em solid white;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
 }
 
 @keyframes blink {
-	50% {
-		border-color: transparent;
-	}
+  50% {
+    border-color: transparent;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homepage-intro {
+    font-size: 24px;
+  }
+
+  .homepage-text {
+    font-size: 16px;
+  }
+
+  .homepage-text-container p:nth-child(4),
+  .homepage-text-container p:nth-child(5) {
+    width: 30%;
+  }
 }

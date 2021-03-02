@@ -1,24 +1,31 @@
 a {
-	text-decoration: none;
-	color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 .jcc {
-	justify-content: center;
+  justify-content: center;
 }
 .jcsb {
-	justify-content: space-between;
+  justify-content: space-between;
 }
 .jcsa {
-	justify-content: space-around;
+  justify-content: space-around;
 }
 .jcse {
-	justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 .jcfe {
-	justify-content: flex-end;
+  justify-content: flex-end;
+}
+.jcfs {
+  justify-content: flex-start;
+}
+
+.aic {
+  align-items: center;
 }
