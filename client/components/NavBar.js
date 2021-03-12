@@ -1,35 +1,32 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 
-import "./NavBar.css";
-import HamburgerMenu from "./HamburgerMenu";
+import { AppBar, makeStyles, Toolbar } from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
+import MenuIcon from "@material-ui/icons/Menu";
+
+import MyDrawer from "./MyDrawer";
+
+const styles = makeStyles((theme) => ({
+  appBar: {
+    backgroundColor: "black",
+  },
+  toolbar: {
+    justifyContent: "flex-end",
+  },
+}));
 
 const NavBar = () => {
-  const [width, setWidth] = useState(window.innerWidth);
-
-  window.addEventListener("resize", () => {
-    setWidth(window.innerWidth);
-  });
+  const classes = styles();
+  const [open, setOpen] = useState(false);
 
   return (
-    <nav className="navbar-container flex jcsb">
-      <div className="navbar-nav name flex jcfs">
-        <Link to="/">Gerald Lou Berzuela</Link>
-      </div>
-
-      {width <= 768 ? (
-        <div className="navbar-nav hamburger flex">
-          <HamburgerMenu />
-        </div>
-      ) : (
-        <div className="navbar-nav list flex jcsb">
-          <Link to="/projects">Projects</Link>
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact</Link>
-        </div>
-      )}
-    </nav>
+    <AppBar position="absolute" className={classes.appBar}>
+      <Toolbar className={classes.toolbar}>
+        <MenuIcon fontSize="large" onClick={() => setOpen(true)} />
+        {open && <MyDrawer open={open} setOpen={setOpen} />}
+      </Toolbar>
+    </AppBar>
   );
 };
 
-export default NavBar;
+export default withStyles(styles)(NavBar);
