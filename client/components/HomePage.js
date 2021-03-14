@@ -1,22 +1,26 @@
-import React from 'react';
+import React from "react";
 
-import './HomePage.css';
+import HomePageTitle from "./HomePageTitle";
+import About from "./About";
+import { Divider, makeStyles } from "@material-ui/core";
+import { mergeClasses } from "@material-ui/styles";
+
+const styles = makeStyles({
+  divider: {
+    margin: "100px 33% 100px 33%",
+  },
+});
 
 const HomePage = () => {
-	return (
-		<div
-			className="homepage-container"
-			aria-label="Image by: Nubelson Fernandes on Unsplash"
-		>
-			<div className="homepage-text-container">
-				<p className="homepage-intro">Hi, I'm Gerald.</p>
-				<p className="homepage-text">I am a..</p>
-				<p className="homepage-text">Student..</p>
-				<p className="homepage-text">Software engineer..</p>
-				<p className="homepage-text">Fitness enthusiast.</p>
-			</div>
-		</div>
-	);
+  const classes = styles();
+
+  return (
+    <div>
+      <HomePageTitle />
+      <Divider className={classes.divider} />
+      <About />
+    </div>
+  );
 };
 
 export default HomePage;
