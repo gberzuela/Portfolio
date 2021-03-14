@@ -20,7 +20,7 @@ const NavBar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <AppBar position="absolute" className={classes.appBar}>
+    <AppBar position="fixed" className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
         <MenuIcon fontSize="large" onClick={() => setOpen(true)} />
         {open && <MyDrawer open={open} setOpen={setOpen} />}

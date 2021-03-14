@@ -23,18 +23,18 @@ const list = [
   { Contact: <ContactMailIcon /> },
 ];
 
-const styles = makeStyles({
+const styles = makeStyles((theme) => ({
   divider: {
-    background: "#5c5c5c",
+    background: theme.palette.divider,
   },
   drawerPaper: {
     width: "200px",
-    backgroundColor: "#424242",
+    backgroundColor: theme.palette.paper,
   },
   drawerContent: {
     color: "white",
   },
-});
+}));
 
 const MyDrawer = ({ open, setOpen }) => {
   const classes = styles();
