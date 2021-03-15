@@ -17,6 +17,9 @@ const styles = makeStyles((theme) => ({
     [theme.breakpoints.up("md")]: {
       alignItems: "center",
     },
+    [theme.breakpoints.down("md")]: {
+      paddingLeft: "60px",
+    },
     flexDirection: "column",
     marginTop: "200px",
   },
