@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./AboutPage.css";
+import TechCard from "./TechCard";
 import image from "../../public/Headshot.jpg";
 
 const AboutPage = () => {
@@ -31,7 +31,35 @@ const AboutPage = () => {
       </section>
       <section className="aboutpage-info skills">
         <h1>Technical skills</h1>
-        <ul>
+        <TechCard
+          title="Proficient"
+          data={[
+            "JavaScript",
+            "React",
+            "Redux",
+            "Firebase",
+            "Sequelize",
+            "Postgres",
+            "Express",
+            "Node",
+            "HTML",
+            "CSS",
+          ]}
+        />
+        <TechCard
+          title="Familiar"
+          data={[
+            "UX/UI design",
+            "React native",
+            "Mocha",
+            "Chai",
+            "Java",
+            "C++",
+            "Python",
+            "Ruby",
+          ]}
+        />
+        {/* <ul>
           <li>
             Proficient: JavaScript, React, Redux, Firebase, Sequelize, Postgres,
             Express, Node, HTML, CSS
@@ -40,7 +68,7 @@ const AboutPage = () => {
             Familiar: UX/UI design, React native, Mocha, Chai, Java, C++,
             Python, Ruby
           </li>
-        </ul>
+        </ul> */}
       </section>
     </div>
   );
