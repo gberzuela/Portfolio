@@ -17,6 +17,9 @@ const theme = createMuiTheme({
     divider: "#5c5c5c",
     paper: "#424242",
     blue: "#0c9ef3",
+    secondary: {
+      main: "#fff",
+    },
   },
   breakpoints: {
     values: {
