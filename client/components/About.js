@@ -10,7 +10,7 @@ import {
 
 import Fade from "react-reveal/Fade";
 
-import headshot from "../../public/Headshot.jpg";
+import headshot from "../../public/images/Headshot.jpg";
 
 const styles = makeStyles((theme) => ({
   container: {
@@ -18,6 +18,12 @@ const styles = makeStyles((theme) => ({
     alignItems: "center",
     [theme.breakpoints.down(767)]: {
       flexDirection: "column",
+    },
+    [theme.breakpoints.up(1025)]: {
+      width: "80%",
+    },
+    [theme.breakpoints.up(1441)]: {
+      width: "50%",
     },
   },
   divider: {
