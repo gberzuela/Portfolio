@@ -17,9 +17,8 @@ import PersonIcon from "@material-ui/icons/Person";
 import ContactMailIcon from "@material-ui/icons/ContactMail";
 
 const list = [
-  { Home: <HomeIcon /> },
+  { "About Me": <HomeIcon /> },
   { Projects: <ComputerIcon /> },
-  { About: <PersonIcon /> },
   { Contact: <ContactMailIcon /> },
 ];
 
