@@ -1,7 +1,7 @@
 import React from "react";
 
 import TechCard from "./TechCard";
-import image from "../../public/Headshot.jpg";
+import image from "../../public/images/Headshot.jpg";
 
 const AboutPage = () => {
   return (

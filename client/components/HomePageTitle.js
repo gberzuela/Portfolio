@@ -33,7 +33,7 @@ const HomePageTitle = () => {
   const classes = styles();
 
   return (
-    <Fade left>
+    <Fade down>
       <Container className={classes.textContainer}>
         <Typography variant="h2" className={classes.text}>
           Hi, I'm Gerald
