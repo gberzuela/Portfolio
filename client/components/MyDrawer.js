@@ -13,12 +13,13 @@ import {
 } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import ComputerIcon from "@material-ui/icons/Computer";
-import PersonIcon from "@material-ui/icons/Person";
+import HistoryIcon from "@material-ui/icons/History";
 import ContactMailIcon from "@material-ui/icons/ContactMail";
 
 const list = [
   { "About Me": <HomeIcon /> },
   { Projects: <ComputerIcon /> },
+  { Background: <HistoryIcon /> },
   { Contact: <ContactMailIcon /> },
 ];
 
@@ -52,7 +53,18 @@ const MyDrawer = ({ open, setOpen }) => {
           const text = Object.keys(item)[0];
           const icon = item[text];
           return (
-            <Link to={`/${text.toLowerCase()}`} key={text}>
+            // <Link to={`/${text.toLowerCase()}`} key={text}>
+            //   <ListItem button>
+            //     <ListItemIcon className={classes.drawerContent}>
+            //       {icon}
+            //     </ListItemIcon>
+            //     <ListItemText
+            //       primary={text}
+            //       className={classes.drawerContent}
+            //     />
+            //   </ListItem>
+            // </Link>
+            <a id={`#${text.toLowerCase()}`} key={text}>
               <ListItem button>
                 <ListItemIcon className={classes.drawerContent}>
                   {icon}
@@ -62,7 +74,7 @@ const MyDrawer = ({ open, setOpen }) => {
                   className={classes.drawerContent}
                 />
               </ListItem>
-            </Link>
+            </a>
           );
         })}
       </List>

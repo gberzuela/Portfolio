@@ -38,7 +38,7 @@ const CustomTimeline = () => {
   const mediaQuery = useMediaQuery("(max-width: 767px)");
 
   return (
-    <Container className={classes.container}>
+    <Container className={classes.container} id="background">
       <Fade up>
         <Container className={classes.titleContainer}>
           <Typography variant="h4">Background</Typography>

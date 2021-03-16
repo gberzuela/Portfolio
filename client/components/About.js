@@ -57,7 +57,7 @@ const About = () => {
   const classes = styles();
 
   return (
-    <Container className={classes.container}>
+    <Container className={classes.container} id="about me">
       <Fade right>
         <Avatar src={headshot} alt="Headshot" className={classes.image} />
         <Container className={classes.textContainer}>
