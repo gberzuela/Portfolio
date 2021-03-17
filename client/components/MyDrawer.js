@@ -17,10 +17,10 @@ import HistoryIcon from '@material-ui/icons/History';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
 
 const list = [
-	{ 'About Me': <HomeIcon /> },
-	{ Projects: <ComputerIcon /> },
-	{ Background: <HistoryIcon /> },
-	{ Contact: <ContactMailIcon /> },
+	['About Me', <HomeIcon />],
+	['Projects', <ComputerIcon />],
+	['Background', <HistoryIcon />],
+	['Contact', <ContactMailIcon />],
 ];
 
 const styles = makeStyles((theme) => ({
@@ -50,8 +50,8 @@ const MyDrawer = ({ open, setOpen }) => {
 			<Divider className={classes.divider} />
 			<List>
 				{list.map((item) => {
-					const text = Object.keys(item)[0];
-					const icon = item[text];
+					const [text, icon] = item;
+
 					return (
 						<Link href={`/#${text.toLowerCase()}`} key={text}>
 							<ListItem button>
