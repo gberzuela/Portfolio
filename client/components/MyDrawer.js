@@ -9,12 +9,14 @@ import {
 	ListItemText,
 	makeStyles,
 	Toolbar,
-	Link,
+	// Link,
 } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import ComputerIcon from '@material-ui/icons/Computer';
 import HistoryIcon from '@material-ui/icons/History';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
+
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const list = [
 	['About Me', <HomeIcon />],
@@ -53,7 +55,7 @@ const MyDrawer = ({ open, setOpen }) => {
 					const [text, icon] = item;
 
 					return (
-						<Link href={`/#${text.toLowerCase()}`} key={text}>
+						<Link to={text.toLowerCase()} smooth={true} key={text}>
 							<ListItem button>
 								<ListItemIcon className={classes.drawerContent}>
 									{icon}
