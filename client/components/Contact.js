@@ -1,7 +1,29 @@
 import React from "react";
 
-const ContactPage = () => {
-  return <div>Hello from ContactPage</div>;
+import { Container, makeStyles } from "@material-ui/core";
+
+import Fade from "react-reveal/Fade";
+
+import ContactForm from "./ContactForm";
+
+const styles = makeStyles((theme) => ({
+  container: {
+    [theme.breakpoints.up(1024)]: {
+      padding: "100px 20%",
+    },
+    padding: "100px 10%",
+  },
+}));
+
+const Contact = () => {
+  const classes = styles();
+  return (
+    <Container id="contact" className={classes.container}>
+      <Fade left>
+        <ContactForm />
+      </Fade>
+    </Container>
+  );
 };
 
-export default ContactPage;
+export default Contact;
