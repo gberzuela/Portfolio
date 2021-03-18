@@ -25,6 +25,7 @@ const CustomTextField = ({
   return (
     <TextField
       type="text"
+      name={label.toLowerCase()}
       label={label}
       value={value}
       onChange={callback}

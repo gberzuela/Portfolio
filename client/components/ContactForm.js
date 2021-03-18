@@ -4,7 +4,6 @@ import React, { useEffect, useState } from "react";
 
 import { Button, Container, FormControl, makeStyles } from "@material-ui/core";
 
-import Title from "./Title";
 import CustomTextField from "./CustomTextField";
 import { Alert } from "@material-ui/lab";
 
@@ -59,7 +58,7 @@ const ContactForm = () => {
   const validateEmail = () => {
     const atPosition = email.indexOf("@");
     const dotPosition = email.lastIndexOf(".");
-    console.log(atPosition, dotPosition);
+
     if (
       atPosition < 1 ||
       dotPosition < atPosition + 2 ||
@@ -96,13 +95,15 @@ const ContactForm = () => {
       .join("&");
   };
 
-  const submitForm = async () => {
-    const result = await fetch("/", {
+  const submitForm = () => {
+    fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", name, email, message }),
-    });
-    console.log(result);
+      body: encode({ "form-name": "contact-form", name, email, message }),
+    })
+      .then((result) => console.log(result))
+      .catch((error) => alert(error));
+    // console.log(result);
   };
 
   useEffect(() => {
@@ -116,47 +117,47 @@ const ContactForm = () => {
 
   return (
     <Container>
-      <Title title="Contact me!" />
-      <FormControl netlify="true">
-        <Container className={classes.container}>
-          <CustomTextField
-            label="Name"
-            value={name}
-            callback={(e) => setName(e.target.value)}
-            className={classes.name}
-            multi={false}
-            error={nameError}
-          />
-          <CustomTextField
-            label="Email"
-            value={email}
-            callback={(e) => setEmail(e.target.value)}
-            className={classes.email}
-            multi={false}
-            error={emailError}
-          />
-        </Container>
+      {/* <FormControl name="contact-form" method="post" data-netlify="true"> */}
+      <input type="hidden" name="form-name" value="contact-form" />
+      <Container className={classes.container}>
         <CustomTextField
-          label="Message"
-          value={message}
-          callback={(e) => setMessage(e.target.value)}
-          className={classes.message}
-          multi={true}
-          error={messageError}
+          label="Name"
+          value={name}
+          callback={(e) => setName(e.target.value)}
+          className={classes.name}
+          multi={false}
+          error={nameError}
         />
-        <Container className={classes.buttonContainer}>
-          <Button
-            variant="contained"
-            className={classes.button}
-            onClick={validateForm}
-          >
-            Send!
-          </Button>
-          {(nameError || emailError || messageError) && (
-            <Alert severity="error">{error}</Alert>
-          )}
-        </Container>
-      </FormControl>
+        <CustomTextField
+          label="Email"
+          value={email}
+          callback={(e) => setEmail(e.target.value)}
+          className={classes.email}
+          multi={false}
+          error={emailError}
+        />
+      </Container>
+      <CustomTextField
+        label="Message"
+        value={message}
+        callback={(e) => setMessage(e.target.value)}
+        className={classes.message}
+        multi={true}
+        error={messageError}
+      />
+      <Container className={classes.buttonContainer}>
+        <Button
+          variant="contained"
+          className={classes.button}
+          onClick={validateForm}
+        >
+          Send Message
+        </Button>
+        {(nameError || emailError || messageError) && (
+          <Alert severity="error">{error}</Alert>
+        )}
+      </Container>
+      {/* </FormControl> */}
     </Container>
   );
 };
