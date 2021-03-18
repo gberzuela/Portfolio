@@ -15,10 +15,10 @@ const styles = makeStyles({
   },
 });
 
-const Title = ({ title }) => {
+const Title = ({ title, className = "" }) => {
   const classes = styles();
   return (
-    <Container className={classes.container}>
+    <Container className={`${classes.container} ${className}`}>
       <Typography variant="h4">{title}</Typography>
       <Divider className={classes.divider} />
     </Container>
