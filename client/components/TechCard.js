@@ -76,7 +76,6 @@ const TechCard = () => {
             }
           />
           <Collapse in={open} timeout="auto">
-            <Divider />
             <CardContent className={classes.content}>
               {data.map((entry) => {
                 const { key, name, image } = entry;
