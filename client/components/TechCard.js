@@ -10,6 +10,7 @@ import {
   Divider,
   IconButton,
   makeStyles,
+  Tooltip,
   useMediaQuery,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
@@ -17,6 +18,9 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import data from "../data/tech";
 
 const styles = makeStyles((theme) => ({
+  arrow: {
+    color: "black",
+  },
   avatar: {
     width: "100px",
     height: "100px",
@@ -37,6 +41,11 @@ const styles = makeStyles((theme) => ({
     backgroundColor: theme.palette.blue,
     color: "white",
     textAlign: "center",
+  },
+  tooltip: {
+    backgroundColor: "black",
+    color: "white",
+    fontSize: 20,
   },
 }));
 
@@ -66,20 +75,29 @@ const TechCard = () => {
         <Collapse in={open} timeout="auto">
           <Divider />
           <CardContent className={classes.content}>
-            {data.map((entry) => (
-              <Avatar
-                key={entry.key}
-                alt={entry.name}
-                src={entry.image}
-                variant="square"
-                classes={{
-                  img: classes.image,
-                }}
-                className={classes.avatar}
-              >
-                {entry.name}
-              </Avatar>
-            ))}
+            {data.map((entry) => {
+              const { key, name, image } = entry;
+              return (
+                <Tooltip
+                  arrow
+                  disableFocusListener
+                  key={key}
+                  title={name}
+                  placement="bottom"
+                  classes={{ tooltip: classes.tooltip, arrow: classes.arrow }}
+                >
+                  <Avatar
+                    alt={name}
+                    src={image}
+                    variant="square"
+                    classes={{
+                      img: classes.image,
+                    }}
+                    className={classes.avatar}
+                  />
+                </Tooltip>
+              );
+            })}
           </CardContent>
         </Collapse>
       </Card>
