@@ -49,15 +49,19 @@ const About = () => {
         <Avatar src={headshot} alt="Headshot" className={classes.image} />
         <Container className={classes.textContainer}>
           <Title title="About" />
-          <Typography className={classes.text}>
+          <Typography variant="h6" className={classes.text}>
             Hello! My name is Gerald Lou Berzuela, a software engineer looking
             for work in California.
           </Typography>
-          <Typography className={classes.text}>
+          <Typography variant="h6" className={classes.text}>
+            Proficient in the PERN stack and I'm currently learning TypeScript
+            and Python.
+          </Typography>
+          <Typography variant="h6" className={classes.text}>
             I enjoy learning and implementing new tech. If I'm not coding, I'm
             either bugging my cats or at the gym.
           </Typography>
-          <Typography className={classes.text}>
+          <Typography variant="h6" className={classes.text}>
             My background includes studying and graduating from Fullstack
             Academy with some college experience at the University of
             California, Irvine studying Computer Science.
