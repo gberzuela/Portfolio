@@ -29,10 +29,7 @@ const Contact = () => {
         <ContactForm />
       </Fade>
       <Fade bottom>
-        <Title
-          title="Check out my LinkedIn and Resume!"
-          className={classes.social}
-        />
+        <Title title="Check these out too" className={classes.social} />
         <SocialButtons />
       </Fade>
     </Container>

@@ -31,6 +31,7 @@ const CustomTextField = ({
       onChange={callback}
       required={true}
       variant="outlined"
+      autoComplete="off"
       className={className}
       error={error}
       fullWidth={true}
