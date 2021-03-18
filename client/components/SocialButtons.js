@@ -4,10 +4,14 @@ import { Button, Container, Link, makeStyles } from "@material-ui/core";
 
 import data from "../data/social";
 
-const styles = makeStyles({
+const styles = makeStyles((theme) => ({
   container: {
     display: "flex",
     justifyContent: "space-around",
+    [theme.breakpoints.down(767)]: {
+      flexDirection: "column",
+      alignItems: "center",
+    },
   },
   github: {
     backgroundColor: "black",
@@ -15,6 +19,7 @@ const styles = makeStyles({
       backgroundColor: "#131313",
     },
     color: "white",
+    marginBottom: "20px",
   },
   linkedin: {
     backgroundColor: "#004182",
@@ -22,8 +27,9 @@ const styles = makeStyles({
       backgroundColor: "#0054a9",
     },
     color: "white",
+    marginBottom: "20px",
   },
-});
+}));
 
 const SocialButtons = () => {
   const classes = styles();
