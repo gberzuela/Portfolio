@@ -3,6 +3,7 @@ import React from "react";
 import { Divider, makeStyles } from "@material-ui/core";
 
 import HomePageTitle from "./HomePageTitle";
+import TechCard from "./TechCard";
 import About from "./About";
 import Projects from "./Projects";
 import CustomTimeline from "./CustomTimeline";
@@ -22,6 +23,8 @@ const HomePage = () => {
       <HomePageTitle />
       <Divider className={classes.divider} />
       <About />
+      <Divider className={classes.divider} />
+      <TechCard />
       <Divider className={classes.divider} />
       <Projects />
       <Divider className={classes.divider} />
