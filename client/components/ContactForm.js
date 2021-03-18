@@ -13,6 +13,9 @@ const styles = makeStyles((theme) => ({
   },
   button: {
     backgroundColor: theme.palette.blue,
+    "&:hover": {
+      backgroundColor: "#05a3ff",
+    },
     color: "white",
     fontWeight: "bold",
   },

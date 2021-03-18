@@ -1,11 +1,12 @@
 import React from "react";
 
-import { Container, makeStyles } from "@material-ui/core";
+import { Container, makeStyles, Typography } from "@material-ui/core";
 
 import Fade from "react-reveal/Fade";
 
 import Title from "./Title";
 import ContactForm from "./ContactForm";
+import SocialButtons from "./SocialButtons";
 
 const styles = makeStyles((theme) => ({
   container: {
@@ -13,6 +14,9 @@ const styles = makeStyles((theme) => ({
       padding: "100px 16%",
     },
     padding: "100px 10%",
+  },
+  social: {
+    marginTop: "20px",
   },
 }));
 
@@ -23,6 +27,11 @@ const Contact = () => {
       <Fade left>
         <Title title="Contact me!" />
         <ContactForm />
+        <Title
+          title="Check out my LinkedIn and Resume!"
+          className={classes.social}
+        />
+        <SocialButtons />
       </Fade>
     </Container>
   );
