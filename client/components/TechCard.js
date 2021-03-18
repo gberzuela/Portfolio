@@ -15,6 +15,8 @@ import {
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
+import Fade from "react-reveal/Fade";
+
 import data from "../data/tech";
 
 const styles = makeStyles((theme) => ({
@@ -60,47 +62,49 @@ const TechCard = () => {
 
   return (
     <Container className={classes.container}>
-      <Card>
-        <CardHeader
-          title="Technical Skills"
-          className={classes.header}
-          action={
-            !mediaQuery && (
-              <IconButton onClick={() => setOpen(!open)}>
-                <ExpandMoreIcon />
-              </IconButton>
-            )
-          }
-        />
-        <Collapse in={open} timeout="auto">
-          <Divider />
-          <CardContent className={classes.content}>
-            {data.map((entry) => {
-              const { key, name, image } = entry;
-              return (
-                <Tooltip
-                  arrow
-                  disableFocusListener
-                  key={key}
-                  title={name}
-                  placement="bottom"
-                  classes={{ tooltip: classes.tooltip, arrow: classes.arrow }}
-                >
-                  <Avatar
-                    alt={name}
-                    src={image}
-                    variant="square"
-                    classes={{
-                      img: classes.image,
-                    }}
-                    className={classes.avatar}
-                  />
-                </Tooltip>
-              );
-            })}
-          </CardContent>
-        </Collapse>
-      </Card>
+      <Fade left>
+        <Card>
+          <CardHeader
+            title="Technical Skills"
+            className={classes.header}
+            action={
+              !mediaQuery && (
+                <IconButton onClick={() => setOpen(!open)}>
+                  <ExpandMoreIcon />
+                </IconButton>
+              )
+            }
+          />
+          <Collapse in={open} timeout="auto">
+            <Divider />
+            <CardContent className={classes.content}>
+              {data.map((entry) => {
+                const { key, name, image } = entry;
+                return (
+                  <Tooltip
+                    arrow
+                    disableFocusListener
+                    key={key}
+                    title={name}
+                    placement="bottom"
+                    classes={{ tooltip: classes.tooltip, arrow: classes.arrow }}
+                  >
+                    <Avatar
+                      alt={name}
+                      src={image}
+                      variant="square"
+                      classes={{
+                        img: classes.image,
+                      }}
+                      className={classes.avatar}
+                    />
+                  </Tooltip>
+                );
+              })}
+            </CardContent>
+          </Collapse>
+        </Card>
+      </Fade>
     </Container>
   );
 };

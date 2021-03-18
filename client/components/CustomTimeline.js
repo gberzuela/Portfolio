@@ -21,7 +21,7 @@ const CustomTimeline = () => {
 
   return (
     <Container className={classes.container} id="background">
-      <Fade right>
+      <Fade left>
         <Title title="Background" />
         <Timeline align={mediaQuery ? "left" : "alternate"}>
           {data.map((entry) => (

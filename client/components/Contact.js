@@ -24,7 +24,7 @@ const Contact = () => {
   const classes = styles();
   return (
     <Container id="contact" className={classes.container}>
-      <Fade left>
+      <Fade right>
         <Title title="Contact me!" />
         <ContactForm />
       </Fade>
