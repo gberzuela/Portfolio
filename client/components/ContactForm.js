@@ -8,6 +8,9 @@ import CustomTextField from "./CustomTextField";
 import { Alert } from "@material-ui/lab";
 
 const styles = makeStyles((theme) => ({
+  alert: {
+    marginTop: "20px",
+  },
   button: {
     backgroundColor: theme.palette.blue,
     color: "white",
@@ -43,8 +46,9 @@ const ContactForm = () => {
   const [emailError, setEmailError] = useState(false);
   const [message, setMessage] = useState("");
   const [messageError, setMessageError] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(0);
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
   const validateName = () => {
     if (!name) {
@@ -81,10 +85,11 @@ const ContactForm = () => {
   };
 
   const validateForm = () => {
+    setSuccess("");
     validateName();
     validateEmail();
     validateMessage();
-    setSubmitted(true);
+    setSubmitted(submitted + 1);
   };
 
   const encode = (data) => {
@@ -95,29 +100,34 @@ const ContactForm = () => {
       .join("&");
   };
 
-  const submitForm = () => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact-form", name, email, message }),
-    })
-      .then((result) => console.log(result))
-      .catch((error) => alert(error));
-    // console.log(result);
+  const submitForm = async () => {
+    try {
+      const result = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact-form", name, email, message }),
+      });
+      setSuccess(
+        `Thank you, ${name}! Your message has been sent. Feel free to leave another!`
+      );
+    } catch (error) {
+      setError("Something went wrong! Try hard refreshing.");
+    }
   };
 
   useEffect(() => {
-    if (!nameError && !emailError && !messageError) {
-      if (submitted) submitForm();
-      setName("");
-      setEmail("");
-      setMessage("");
+    if (submitted) {
+      if (!nameError && !emailError && !messageError) {
+        submitForm();
+        setName("");
+        setEmail("");
+        setMessage("");
+      }
     }
-  }, [nameError, emailError, messageError, submitted]);
+  }, [submitted]);
 
   return (
     <Container>
-      {/* <FormControl name="contact-form" method="post" data-netlify="true"> */}
       <input type="hidden" name="form-name" value="contact-form" />
       <Container className={classes.container}>
         <CustomTextField
@@ -157,7 +167,11 @@ const ContactForm = () => {
           <Alert severity="error">{error}</Alert>
         )}
       </Container>
-      {/* </FormControl> */}
+      {success && (
+        <Alert severity="success" className={classes.alert}>
+          {success}
+        </Alert>
+      )}
     </Container>
   );
 };
