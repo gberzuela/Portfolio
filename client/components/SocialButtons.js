@@ -1,17 +1,22 @@
 import React from "react";
 
 import { Button, Container, Link, makeStyles } from "@material-ui/core";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import DescriptionIcon from "@material-ui/icons/Description";
 
-import resume from "../../public/Resume.pdf";
+import data from "../data/social";
 
 const styles = makeStyles({
   container: {
     display: "flex",
     justifyContent: "space-around",
   },
-  linkedInButton: {
+  github: {
+    backgroundColor: "black",
+    "&:hover": {
+      backgroundColor: "#131313",
+    },
+    color: "white",
+  },
+  linkedin: {
     backgroundColor: "#004182",
     "&:hover": {
       backgroundColor: "#0054a9",
@@ -25,28 +30,21 @@ const SocialButtons = () => {
 
   return (
     <Container className={classes.container}>
-      <Link
-        href="https://www.linkedin.com/in/gerald-lou-berzuela/"
-        target="_blank"
-      >
-        <Button
-          size="large"
-          variant="contained"
-          className={classes.linkedInButton}
-          startIcon={<LinkedInIcon />}
-        >
-          LinkedIn
-        </Button>
-      </Link>
-      <Link href={resume} target="_blank">
-        <Button
-          size="large"
-          variant="contained"
-          startIcon={<DescriptionIcon />}
-        >
-          Resume
-        </Button>
-      </Link>
+      {data.map((entry) => {
+        const { key, link, name, image } = entry;
+        return (
+          <Link href={link} target="_blank" key={key}>
+            <Button
+              size="large"
+              variant="contained"
+              className={classes[name.toLowerCase()]}
+              startIcon={image}
+            >
+              {name}
+            </Button>
+          </Link>
+        );
+      })}
     </Container>
   );
 };
