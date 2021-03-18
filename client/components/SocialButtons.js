@@ -39,7 +39,7 @@ const SocialButtons = () => {
       {data.map((entry) => {
         const { key, link, name, image } = entry;
         return (
-          <Link href={link} target="_blank" key={key}>
+          <Link href={link} target="blank" key={key}>
             <Button
               size="large"
               variant="contained"

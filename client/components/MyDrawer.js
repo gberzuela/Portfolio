@@ -71,7 +71,7 @@ const MyDrawer = ({ open, setOpen }) => {
             </Link>
           );
         })}
-        <MUILink href={resume} target="_blank">
+        <MUILink href={resume} target="blank">
           <ListItem button>
             <ListItemIcon className={classes.drawerContent}>
               <DescriptionIcon />
