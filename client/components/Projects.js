@@ -18,7 +18,7 @@ const ProjectsPage = () => {
   const classes = styles();
   return (
     <Container id="projects" className={classes.container}>
-      <Fade left>
+      <Fade right>
         <Title title="Projects" />
         {data.map((entry, index) => (
           <ProjectCard key={entry.key} data={entry} alternate={index % 2} />
