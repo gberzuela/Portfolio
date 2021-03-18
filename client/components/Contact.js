@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, makeStyles, Typography } from "@material-ui/core";
+import { Container, makeStyles } from "@material-ui/core";
 
 import Fade from "react-reveal/Fade";
 
@@ -27,6 +27,8 @@ const Contact = () => {
       <Fade left>
         <Title title="Contact me!" />
         <ContactForm />
+      </Fade>
+      <Fade bottom>
         <Title
           title="Check out my LinkedIn and Resume!"
           className={classes.social}
