@@ -9,13 +9,18 @@ import {
   ListItemText,
   makeStyles,
   Toolbar,
+  Link as MUILink,
 } from "@material-ui/core";
 import HomeIcon from "@material-ui/icons/Home";
 import ComputerIcon from "@material-ui/icons/Computer";
 import HistoryIcon from "@material-ui/icons/History";
 import ContactMailIcon from "@material-ui/icons/ContactMail";
+import DescriptionIcon from "@material-ui/icons/Description";
 
 import { Link } from "react-scroll";
+
+import resume from "../../public/Resume.pdf";
+console.log(resume);
 
 const list = [
   ["About Me", <HomeIcon />],
@@ -67,6 +72,17 @@ const MyDrawer = ({ open, setOpen }) => {
             </Link>
           );
         })}
+        <MUILink href={resume} target="_blank">
+          <ListItem button>
+            <ListItemIcon className={classes.drawerContent}>
+              <DescriptionIcon />
+            </ListItemIcon>
+            <ListItemText
+              primary={"Resume"}
+              className={classes.drawerContent}
+            />
+          </ListItem>
+        </MUILink>
       </List>
     </Drawer>
   );
