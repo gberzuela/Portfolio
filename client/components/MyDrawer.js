@@ -20,7 +20,6 @@ import DescriptionIcon from "@material-ui/icons/Description";
 import { Link } from "react-scroll";
 
 import resume from "../../public/Resume.pdf";
-console.log(resume);
 
 const list = [
   ["About Me", <HomeIcon />],
