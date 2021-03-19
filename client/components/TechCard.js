@@ -23,6 +23,10 @@ const styles = makeStyles((theme) => ({
 		color: 'black',
 	},
 	avatar: {
+		[theme.breakpoints.down(768)]: {
+			width: '75px',
+			height: '75px',
+		},
 		width: '100px',
 		height: '100px',
 		margin: '10px',
