@@ -23,6 +23,7 @@ const styles = makeStyles((theme) => ({
 		flexDirection: 'column',
 		paddingTop: '150px',
 		paddingBottom: '50px',
+		height: '400px',
 	},
 	typewriterText: {
 		color: 'white',
@@ -47,9 +48,9 @@ const HomePageTitle = () => {
 						strings: ['Student.', 'Software Engineer.', 'Fitness enthusiast.'],
 						autoStart: true,
 						loop: true,
-						pauseFor: 1000,
+						pauseFor: 2000,
 						wrapperClassName: `${classes.text} ${classes.typewriterText}`,
-						cursorClassName: `${classes.text} ${classes.typewriterText}`,
+						// cursorClassName: `${classes.text} ${classes.typewriterText}`,
 					}}
 				/>
 			</Container>
