@@ -50,7 +50,6 @@ const HomePageTitle = () => {
 						loop: true,
 						pauseFor: 2000,
 						wrapperClassName: `${classes.text} ${classes.typewriterText}`,
-						// cursorClassName: `${classes.text} ${classes.typewriterText}`,
 					}}
 				/>
 			</Container>

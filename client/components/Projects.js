@@ -1,31 +1,23 @@
-import React from "react";
+import React from 'react';
 
-import { Container, makeStyles } from "@material-ui/core";
+import Fade from 'react-reveal/Fade';
 
-import Fade from "react-reveal/Fade";
-
-import data from "../data/projects";
-import Title from "./Title";
-import ProjectCard from "./ProjectCard";
-
-const styles = makeStyles({
-  container: {
-    padding: "100px 16%",
-  },
-});
+import data from '../data/projects';
+import CustomContainer from './CustomContainer';
+import Title from './Title';
+import ProjectCard from './ProjectCard';
 
 const ProjectsPage = () => {
-  const classes = styles();
-  return (
-    <Container id="projects" className={classes.container}>
-      <Fade right>
-        <Title title="Projects" />
-        {data.map((entry, index) => (
-          <ProjectCard key={entry.key} data={entry} alternate={index % 2} />
-        ))}
-      </Fade>
-    </Container>
-  );
+	return (
+		<CustomContainer id="projects">
+			<Fade right>
+				<Title title="Projects" />
+				{data.map((entry, index) => (
+					<ProjectCard key={entry.key} data={entry} alternate={index % 2} />
+				))}
+			</Fade>
+		</CustomContainer>
+	);
 };
 
 export default ProjectsPage;
