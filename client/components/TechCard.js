@@ -23,12 +23,12 @@ const styles = makeStyles((theme) => ({
 		color: 'black',
 	},
 	avatar: {
-		[theme.breakpoints.down(768)]: {
-			width: '75px',
-			height: '75px',
+		[theme.breakpoints.down(767)]: {
+			width: '25%',
+			height: '25%',
 		},
-		width: '100px',
-		height: '100px',
+		width: '11%',
+		height: '11%',
 		margin: '10px',
 	},
 	container: {
