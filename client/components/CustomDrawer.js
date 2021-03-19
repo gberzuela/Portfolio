@@ -41,7 +41,7 @@ const styles = makeStyles((theme) => ({
 	},
 }));
 
-const MyDrawer = ({ open, setOpen }) => {
+const CustomDrawer = ({ open, setOpen }) => {
 	const classes = styles();
 
 	return (
@@ -87,4 +87,4 @@ const MyDrawer = ({ open, setOpen }) => {
 	);
 };
 
-export default MyDrawer;
+export default CustomDrawer;
