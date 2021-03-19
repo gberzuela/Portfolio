@@ -17,4 +17,4 @@ Personal portfolio website hosted on Netlify
 
 ## To-do:
 
-- Update README
+- Update README to include instructions on how to run it locally
