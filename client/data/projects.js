@@ -19,7 +19,7 @@ export default [
 		key: 1,
 		name: 'Viditia',
 		details:
-			'Data visualziation web application where users can participate, visualize and interact with data from polls in a fun and clever way.',
+			'- Data visualziation web application where users can participate, visualize and interact with data from polls in a fun and clever way.',
 		github: 'https://github.com/2011-capricorn/Viditia',
 		deploy: 'https://viditia-cf976.web.app/home',
 		youtube: 'https://www.youtube.com/watch?v=zXWWoYZqnwo',
@@ -30,7 +30,7 @@ export default [
 		key: 2,
 		name: 'Stick & Pin',
 		details:
-			'E-commerce web application that demonstrates dynamic rendering, secure API, admin CRUD functionality, and partial cart functionality.',
+			'- E-commerce web application that demonstrates dynamic rendering, secure API, admin CRUD functionality, and partial cart functionality.',
 		github: 'https://github.com/Grace-Shopper-Gamma/Grace-Shopper-Gamma',
 		deploy: 'https://sticknpin.herokuapp.com/',
 		images: [gs1, gs2, gs3, gs4, gs5],
@@ -40,7 +40,7 @@ export default [
 		key: 3,
 		name: 'Breaking Down Radix Sort',
 		details:
-			'Medium article that discusses sorting algorithms and analyzes Radix Sort in detail.',
+			'- Medium article that discusses sorting algorithms and analyzes Radix Sort in detail.',
 		github: 'https://github.com/gberzuela/PEP',
 		article:
 			'https://gberzuela.medium.com/breaking-down-radix-sort-2b5cf65a2ab8',
