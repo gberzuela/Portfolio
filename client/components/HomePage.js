@@ -6,7 +6,7 @@ import HomePageTitle from './HomePageTitle';
 import TechCard from './TechCard';
 import About from './About';
 import Projects from './Projects';
-import CustomTimeline from './CustomTimeline';
+import Timeline from './Timeline';
 import Contact from './Contact';
 
 const styles = makeStyles({
@@ -27,7 +27,7 @@ const HomePage = () => {
 			<Divider className={classes.divider} />
 			<Projects />
 			<Divider className={classes.divider} />
-			<CustomTimeline />
+			<Timeline />
 			<Divider className={classes.divider} />
 			<Contact />
 		</>

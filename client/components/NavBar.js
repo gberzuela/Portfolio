@@ -4,7 +4,7 @@ import { AppBar, makeStyles, Toolbar } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import CustomDrawer from './CustomDrawer';
+import Drawer from './Drawer';
 
 const styles = makeStyles((theme) => ({
 	appBar: {
@@ -23,7 +23,7 @@ const NavBar = () => {
 		<AppBar position="fixed" className={classes.appBar}>
 			<Toolbar className={classes.toolbar}>
 				<MenuIcon fontSize="large" onClick={() => setOpen(true)} />
-				{open && <CustomDrawer open={open} setOpen={setOpen} />}
+				{open && <Drawer open={open} setOpen={setOpen} />}
 			</Toolbar>
 		</AppBar>
 	);

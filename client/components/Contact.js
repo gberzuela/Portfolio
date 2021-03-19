@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core';
 
 import Fade from 'react-reveal/Fade';
 
-import CustomContainer from './CustomContainer';
+import Container from './Container';
 import Title from './Title';
 import ContactForm from './ContactForm';
 import SocialButtons from './SocialButtons';
@@ -23,7 +23,7 @@ const styles = makeStyles((theme) => ({
 const Contact = () => {
 	const classes = styles();
 	return (
-		<CustomContainer id="contact" className={classes.container}>
+		<Container id="contact" className={classes.container}>
 			<Fade right>
 				<Title title="Contact me!" />
 				<ContactForm />
@@ -32,7 +32,7 @@ const Contact = () => {
 				<Title title="Check these out too" className={classes.social} />
 				<SocialButtons />
 			</Fade>
-		</CustomContainer>
+		</Container>
 	);
 };
 
