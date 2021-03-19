@@ -14,11 +14,12 @@ const styles = makeStyles((theme) => ({
 	},
 	textContainer: {
 		display: 'flex',
-		[theme.breakpoints.up('md')]: {
+		[theme.breakpoints.up(768)]: {
 			alignItems: 'center',
 		},
-		[theme.breakpoints.down('md')]: {
+		[theme.breakpoints.down(767)]: {
 			paddingLeft: '60px',
+			height: '500px',
 		},
 		flexDirection: 'column',
 		paddingTop: '150px',
