@@ -61,7 +61,7 @@ export default [
     location: "Irvine, CA",
     event: "University of California, Irvine",
     info: [
-      "Studied under the Donal Bren School of Information and Computer Science",
+      "Studied under the Donald Bren School of Information and Computer Science",
       "Completed coursework in: Python, C++, Java, algorithms, and data structures",
     ],
   },
