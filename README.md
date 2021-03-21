@@ -13,7 +13,7 @@ Please check it out at [https://geraldberzuela.dev/](https://geraldberzuela.dev/
 - <a href="https://github.com/fisshy/react-scroll" target="_blank">react-scroll</a>
 - <a href="https://github.com/tameemsafi/typewriterjs" target="_blank">typewriter-effect</a>
 - <a href="https://parceljs.org/" target="_blank">Parcel</a>
-- <a href="https://www.netlify.com/" target="_blank">Natlify</a>
+- <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 
 ## Getting Started
 
