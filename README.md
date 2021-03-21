@@ -6,14 +6,14 @@ Please check it out at [https://geraldberzuela.dev/](https://geraldberzuela.dev/
 
 ### Built with:
 
-- [React](https://reactjs.org/)
-- [Material UI](https://material-ui.com/)
-- [react-awesome-slider](https://github.com/rcaferati/react-awesome-slider)
-- [react-reveal](https://www.react-reveal.com/)
-- [react-scroll](https://github.com/fisshy/react-scroll)
-- [typetwriter-effect](https://github.com/tameemsafi/typewriterjs)
-- [Parcel](https://parceljs.org/)
-- [Netlify](https://www.netlify.com/)
+- <a href="https://reactjs.org/" target="_blank">React</a>
+- <a href="https://material-ui.com/" target="_blank">Material UI</a>
+- <a href="https://github.com/rcaferati/react-awesome-slider" target="_blank">react-awesome-slider</a>
+- <a href="https://www.react-reveal.com/" target="_blank">react-reveal</a>
+- <a href="https://github.com/fisshy/react-scroll" target="_blank">react-scroll</a>
+- <a href="https://github.com/fisshy/react-scroll" target="_blank">typewriter-effect</a>
+- <a href="https://parceljs.org/" target="_blank">Parcel</a>
+- <a href="https://www.netlify.com/" target="_blank">Natlify</a>
 
 ## Getting Started
 
