@@ -17,8 +17,6 @@ Please check it out at [https://geraldberzuela.dev/](https://geraldberzuela.dev/
 
 ## Getting Started
 
----
-
 If you would like to check it out locally, follow the following steps.
 
 ### **Prerequisites**
@@ -48,8 +46,6 @@ npm run start
 You should now be able to run the application on [http://localhost:1234/](http://localhost:1234/)
 
 ## Contact
-
----
 
 Feel free to reach out to me!
 
