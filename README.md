@@ -49,5 +49,5 @@ You should now be able to run the application on [http://localhost:1234/](http:/
 
 Feel free to reach out to me!
 
-- Through LinkedIn: [linkedin.com/in/gerald-lou-berzuela/](linkedin.com/in/gerald-lou-berzuela/)
+- Through [LinkedIn](https://www.linkedin.com/in/gerald-lou-berzuela/)
 - Or email: gberzuela575@gmail.com
