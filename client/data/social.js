@@ -4,7 +4,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import DescriptionIcon from "@material-ui/icons/Description";
 
-import resume from "../../public/Resume.pdf";
+import resume from "../../public/GeraldLouBerzuela_Resume.pdf";
 
 export default [
   {
