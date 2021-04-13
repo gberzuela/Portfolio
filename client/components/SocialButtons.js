@@ -13,6 +13,9 @@ const styles = makeStyles((theme) => ({
       alignItems: "center",
     },
   },
+  button: {
+    width: "150px",
+  },
   github: {
     backgroundColor: "black",
     "&:hover": {
@@ -43,7 +46,7 @@ const SocialButtons = () => {
             <Button
               size="large"
               variant="contained"
-              className={classes[name.toLowerCase()]}
+              className={`${classes[name.toLowerCase()]} ${classes.button}`}
               startIcon={image}
             >
               {name}
